@@ -1077,10 +1077,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 33f41e79f62aa3642a6392d8e3fdfde6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  bestScoreText: {fileID: 1978062854}
+  enterName: {fileID: 101581109}
   startButton: {fileID: 2131114513}
   quitButton: {fileID: 2122091748}
-  bestScore: {fileID: 1978062854}
-  enterName: {fileID: 101581109}
 --- !u!1 &1489964576
 GameObject:
   m_ObjectHideFlags: 0
