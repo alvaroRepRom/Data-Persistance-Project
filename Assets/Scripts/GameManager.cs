@@ -19,10 +19,10 @@ public class GameManager : MonoBehaviour
     public Button startButton;
     public Button quitButton;
 
-    public static string name;
+    public string name;
 
-    public static string bestName;
-    public static int bestScore = 0;
+    public string bestName;
+    public int bestScore = 0;
 
     private void Awake()
     {
@@ -64,7 +64,7 @@ public class GameManager : MonoBehaviour
     public void SaveScore()
     {
         SaveData data = new SaveData();
-        data.name = name;
+        data.name = bestName;
         data.score = bestScore;
 
         string json = JsonUtility.ToJson(data);
@@ -96,10 +96,11 @@ public class GameManager : MonoBehaviour
         return bestScore;
     }
 
-    public void SetBestScore(int points)
+    public void SetBestScore(int points, string name)
     {
         if (bestScore > points) return;
         bestScore = points;
+        bestName = name;
         SaveScore();
     }
 
